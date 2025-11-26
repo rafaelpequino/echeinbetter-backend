@@ -1,0 +1,6 @@
+@Echeinbetter_HostAddress = http://localhost:5136
+
+GET {{Echeinbetter_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
