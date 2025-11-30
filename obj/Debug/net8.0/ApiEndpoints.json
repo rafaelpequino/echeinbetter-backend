@@ -34,28 +34,6 @@
   },
   {
     "ContainingType": "Echeinbetter.Controllers.InventoryController",
-    "Method": "GetAll",
-    "RelativePath": "api/inventory/",
-    "HttpMethod": "GET",
-    "IsController": false,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      },
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 500
-      }
-    ],
-    "EndpointName": "ListInventory"
-  },
-  {
-    "ContainingType": "Echeinbetter.Controllers.InventoryController",
     "Method": "GetById",
     "RelativePath": "api/inventory/{id}",
     "HttpMethod": "GET",
@@ -162,5 +140,33 @@
       }
     ],
     "EndpointName": "DeleteInventory"
+  },
+  {
+    "ContainingType": "Echeinbetter.Controllers.InventoryController",
+    "Method": "Search",
+    "RelativePath": "api/inventory/search",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Echeinbetter.Dtos.SearchInventoryDto",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      }
+    ],
+    "EndpointName": "SearchInventory"
   }
 ]

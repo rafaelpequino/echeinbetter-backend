@@ -15,8 +15,8 @@ public static class InventoryEndpoints
             .Produces(400)
             .Produces(500);
 
-        group.MapGet("/", InventoryController.GetAll)
-            .WithName("ListInventory")
+        group.MapPost("/search", InventoryController.Search)
+            .WithName("SearchInventory")
             .Produces(200)
             .Produces(500);
 

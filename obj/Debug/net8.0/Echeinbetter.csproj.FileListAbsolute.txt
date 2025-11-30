@@ -338,3 +338,4 @@ C:\Dev\EngComputacao\Echeinbetter\Backend\obj\Debug\net8.0\refint\Echeinbetter.d
 C:\Dev\EngComputacao\Echeinbetter\Backend\obj\Debug\net8.0\Echeinbetter.pdb
 C:\Dev\EngComputacao\Echeinbetter\Backend\obj\Debug\net8.0\Echeinbetter.genruntimeconfig.cache
 C:\Dev\EngComputacao\Echeinbetter\Backend\obj\Debug\net8.0\ref\Echeinbetter.dll
+C:\Dev\EngComputacao\Echeinbetter\Backend\obj\Debug\net8.0\Echeinbetter.sourcelink.json

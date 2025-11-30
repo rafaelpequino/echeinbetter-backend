@@ -2,6 +2,7 @@ using Echeinbetter.Database;
 using Echeinbetter.Dtos;
 using Echeinbetter.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace Echeinbetter.Controllers
 {
@@ -125,16 +126,27 @@ namespace Echeinbetter.Controllers
             }
         }
 
-        [HttpGet("/api/inventory/data")]
-        public static IResult GetData(HttpContext http)
+        [HttpPost("/api/inventory/search")]
+        public static IResult Search(SearchInventoryDto? dto, HttpContext http)
         {
             try
             {
                 var context = new EngenhariasSenacContext();
                 var dalInventory = new DAL<Inventory>(context);
-                var inventory = dalInventory.Select();
 
-                return Results.Ok(inventory);
+                // Se não houver DTO ou BarCode for nulo/vazio, retorna todos
+                if (dto == null || string.IsNullOrWhiteSpace(dto.BarCode))
+                {
+                    var allInventory = dalInventory.Select();
+                    return Results.Ok(allInventory);
+                }
+
+                // Se houver BarCode, filtra pelos resultados
+                var filteredInventory = dalInventory.SelectWhereList(
+                    e => e.BarCode.ToLower().Contains(dto.BarCode.ToLower())
+                );
+
+                return Results.Ok(filteredInventory);
             }
             catch (Exception ex)
             {

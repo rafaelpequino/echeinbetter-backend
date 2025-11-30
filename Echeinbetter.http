@@ -1,6 +1,29 @@
 @Echeinbetter_HostAddress = http://localhost:5136
 
-GET {{Echeinbetter_HostAddress}}/weatherforecast/
-Accept: application/json
+# Buscar todos os itens (sem filtro)
+POST {{Echeinbetter_HostAddress}}/api/inventory/search
+Content-Type: application/json
+
+{}
+
+###
+
+# Buscar por BarCode específico
+POST {{Echeinbetter_HostAddress}}/api/inventory/search
+Content-Type: application/json
+
+{
+  "barCode": "123456"
+}
+
+###
+
+# Buscar por BarCode parcial (case-insensitive)
+POST {{Echeinbetter_HostAddress}}/api/inventory/search
+Content-Type: application/json
+
+{
+  "barCode": "1234"
+}
 
 ###

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Echeinbetter")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+27352ee5a0a142ae582e91b16a29ec0deb64dbd2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5eaa5187ac0dd342369f8bbf9d5e8f8f9b2d1634")]
 [assembly: System.Reflection.AssemblyProductAttribute("Echeinbetter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Echeinbetter")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
